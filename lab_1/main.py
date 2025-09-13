@@ -8,6 +8,6 @@ def find_sum(nums: List[int], target: int) -> Optional[List[int]]:
             try:
                 if int(nums[i]) + int(nums[j]) == target:
                     return [i, j]
-            except ValueError:
+            except (ValueError, TypeError):
                 return None
     return None
