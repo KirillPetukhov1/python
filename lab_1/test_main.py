@@ -28,6 +28,18 @@ class TestFindSum(unittest.TestCase):
 
     def test_str_in_nums(self):
         self.assertEqual(find_sum(['dsf', 'sd', 8, 3.68], 5), None)
+        
+    def test_obj_in_nums(self):
+        self.assertEqual(find_sum([{'gh': 'gfd', 'gdf': 'dfg'}, [5, 7, 7], 8, 3.68], 5), None)
+        
+    def test_target_not_int(self):
+        self.assertEqual(find_sum([1, 2, 8, 3], 'gdr'), None)
+        
+    def test_target_float(self):
+        self.assertEqual(find_sum([1, 2, 8, 3], 5.7), [1, 3])
+        
+    def test_nums_is_not_list(self):
+        self.assertEqual(find_sum({'gh': 'gfd', 'gdf': 'dfg'}, 5), None)
 
 # unittest.main(argv=[''], verbosity=2, exit=False)
 if __name__ == '__main__':
