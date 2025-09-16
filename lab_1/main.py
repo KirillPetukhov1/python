@@ -1,5 +1,6 @@
 from typing import Optional, List
 
+
 def find_sum(nums: List[int], target: int) -> Optional[List[int]]:
     if (type(nums) != list):
         return None
